@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MiApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo1.gif" alt="Logo" class="rounded-circle" style="width: 40px; height: 40px;"> MiApp
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accesoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user-circle me-1"></i> Acceso
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accesoDropdown">
+                <li><a class="dropdown-item active" href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                <li><hr class="dropdown-divider"><a class="dropdown-item" href="registro.html"><i class="fas fa-user-plus me-2"></i>Registro</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="ayuda.html"><i class="fas fa-question-circle me-2"></i>Ayuda</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Carrusel -->
+    <div id="bannerCarousel" class="carousel slide carousel-fade mt-0" data-bs-ride="carousel" data-bs-interval="3000" style="height: 50vh; min-height: 450px;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <img src="https://images.homify.com/v1441307340/p/photo/image/876952/19TV.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3 animate__animated animate__fadeInUp">
+            <h2 class="animate__animated animate__fadeInDown">Bienvenido a MiApp</h2>
+            <p>La solución perfecta para tus necesidades</p>
+          </div>
+        </div>
+
+        <div class="carousel-item h-100">
+          <img src="https://content.elmueble.com/medio/2022/08/03/ly-villa-costa-blanca-1_b02f5d33_900x900.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3 animate__animated animate__fadeInUp">
+            <h2>Seguridad Garantizada</h2>
+            <p>Tus datos siempre protegidos</p>
+          </div>
+        </div>
+
+        <div class="carousel-item h-100">
+          <img src="https://static0.housfy.com/prod/blog/images/2020/01/21114835/huf-haus-iluminacion-noche_7d89c528_1200x630.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 3">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3 animate__animated animate__fadeInUp">
+            <h2>Acceso Fácil y Rápido</h2>
+            <p>Inicia sesión en segundos</p>
+          </div>
+        </div>
+
+        <div class="carousel-item h-100">
+          <img src="https://content.elmueble.com/medio/2022/08/03/ly-villa-costa-blanca-1_b02f5d33_900x900.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 4">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3 animate__animated animate__fadeInUp">
+            <h2>Nuevo Título para Imagen 4</h2>
+            <p>Nueva descripción para imagen 4</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </main>
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="text-center mb-2">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="text-center mb-2">
+        <a href="index.html" class="text-white mx-2">Inicio</a>
+        <a href="nosotros.html" class="text-white mx-2">Nosotros</a>
+        <a href="#" class="text-white mx-2">Servicios</a>
+        <a href="contacto.html" class="text-white mx-2">Contacto</a>
+        <a href="#" class="text-white mx-2">Términos y condiciones</a>
+        <a href="#" class="text-white mx-2">Política de privacidad</a>
+      </div>
+      <div class="text-center small">
+        <p class="mb-0">&copy; 2025 MiApp. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase y Bootstrap -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAki1J6NbnvJXfzC98i0EhG0APn7m1bmNM",
+      authDomain: "basegaby-37b65.firebaseapp.com",
+      projectId: "basegaby-37b65",
+      storageBucket: "basegaby-37b65.appspot.com",
+      messagingSenderId: "704261450213",
+      appId: "1:704261450213:web:8eb5bb135b00c7795c670c",
+      measurementId: "G-M3YMGDX62Z"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const messageDiv = document.getElementById('message');
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        showMessage(messageDiv, "¡Inicio de sesión exitoso! Redirigiendo...", "success");
+        setTimeout(() => window.location.href = "user.html", 1500);
+      } catch (error) {
+        showMessage(messageDiv, getErrorMessage(error), "danger");
+      }
+    });
+
+    function showMessage(element, message, type) {
+      if (!element) return;
+      element.textContent = message;
+      element.className = `alert alert-${type}`;
+      element.style.display = "block";
+      setTimeout(() => element.style.display = "none", 5000);
+    }
+
+    function getErrorMessage(error) {
+      const map = {
+        "auth/invalid-email": "El formato del email es incorrecto",
+        "auth/user-not-found": "Email o contraseña incorrectos",
+        "auth/wrong-password": "Email o contraseña incorrectos",
+        "auth/too-many-requests": "Demasiados intentos fallidos. Intenta más tarde",
+        "auth/user-disabled": "Esta cuenta ha sido deshabilitada"
+      };
+      return map[error.code] || error.message;
+    }
+
+    onAuthStateChanged(auth, (user) => {
+      console.log(user ? "Usuario activo:" + user.email : "No hay usuario logueado");
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

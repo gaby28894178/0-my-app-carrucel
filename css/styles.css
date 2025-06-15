@@ -1,0 +1,213 @@
+ :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    /* Navbar Estilizada */
+    .navbar-custom {
+      background-color: var(--secondary-color) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white !important;
+    }
+    
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 5px;
+      transition: all 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    /* Menú desplegable de acceso */
+    .dropdown-menu {
+      background-color: var(--secondary-color);
+      border: none;
+    }
+    
+    .dropdown-item {
+      color: white !important;
+      padding: 8px 15px;
+    }
+    
+    .dropdown-item:hover {
+      background-color: var(--primary-color);
+      color: white !important;
+    }
+    
+    .dropdown-divider {
+      border-color: rgb(180, 35, 9);
+    }
+    
+    /* Header con Carrusel */
+    .header-carousel {
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .carousel-item {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .carousel-item:nth-child(1) {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1200x400/?technology');
+    }
+    
+    .carousel-item:nth-child(2) {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1200x400/?security');
+    }
+    
+    .carousel-item:nth-child(3) {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1200x400/?login');
+    }
+    
+    .carousel-caption {
+      bottom: 30%;
+    }
+    
+    /* Formulario de Login */
+    .login-container {
+      max-width: 500px;
+      margin: 1rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .login-title {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    
+    .form-control {
+      padding: 12px 15px;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    
+    .btn-login {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 12px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .btn-login:hover {
+      background-color: #2980b9;
+    }
+    
+    .login-links {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .login-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    /* Footer Estilizado */
+    .footer-custom {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 0.21rem 0;
+      margin-top: auto;
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0.2rem 0;
+    }
+    
+    .footer-links a {
+      color: white;
+      margin: 0 -70px;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    .copyright {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+
+/* Estilos para el carrusel */
+.header-carousel {
+  width: 170%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 70vh; /* Altura fija para el carrusel (ajusta según necesidad) */
+  min-height: 400px; /* Mínimo para móviles */
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-item img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 8px;
+  bottom: 20px; /* Posición desde abajo */
+}
